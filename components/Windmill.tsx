@@ -92,7 +92,7 @@ export default function Windmill({ style }: { style?: React.CSSProperties }) {
 
       {/* ── ROTOR ── */}
       <g ref={rotorRef}>
-        {[45, 135, 225, 315].map((deg, i) => (
+        {[0, 60, 120, 180, 240, 300].map((deg, i) => (
           <g key={deg} transform={`translate(200,200) rotate(${deg})`}>
             <path d={blade} fill={i % 2 === 0 ? "url(#wm-blade-a)" : "url(#wm-blade-b)"} stroke="#3d1800" strokeWidth="1.5" />
             <line x1="-33" y1="-55"  x2="33" y2="-55"  stroke="#3d1800" strokeWidth="0.9" opacity="0.55" />
